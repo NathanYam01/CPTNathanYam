@@ -7,5 +7,6 @@ public class repotest{
 		con.println("TGIF");
 		con.println("CPT Time!");
 		con.println("Hi");
+		con.println("Yo");
 	}
 }
