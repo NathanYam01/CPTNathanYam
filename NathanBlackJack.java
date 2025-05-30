@@ -31,7 +31,9 @@ public class NathanBlackJack{
 		con.println("                                                            (P) Play                            ");
 		con.println("                                                            (L) LeaderBoard                     ");
 		con.println("                                                            (H) Help                            ");
-		con.println("                                                            (Q) Quit                            ");		
+		con.println("                                                            (Q) Quit                            ");	
+		
+			
 		
 		//Prints the image
 		con.repaint();
