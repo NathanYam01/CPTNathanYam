@@ -10,6 +10,9 @@ public class NathanBlackJack{
 		//Imports and tells where the image goes
 		BufferedImage blackjacklogo = con.loadImage("BlackJacklogo.png");
 		con.drawImage(blackjacklogo ,250,200);
+		con.repaint();
+		con.clear();
+
 		con.println("                                                       ");
 		con.println("                                                       ");
 		con.println("                                                       ");
@@ -33,9 +36,20 @@ public class NathanBlackJack{
 		con.println("                                                            (H) Help                            ");
 		con.println("                                                            (Q) Quit                            ");	
 		
-			
+		char charMenu = con.getChar();
 		
-		//Prints the image
-		con.repaint();
+		con.clear();
+		
+		if(charMenu == 'P' || charMenu == 'p'){
+			con.println("Play");
+		}else if (charMenu == 'L' || charMenu == 'l'){
+			con.println("Leaderboard");
+		}else if (charMenu == 'H' || charMenu == 'h'){
+			con.println("Help");
+		}else if (charMenu == 'Q' || charMenu == 'q'){
+			con.println("You quit Nathan's Blackjack");
+		
+		con.clear();
+		}
 	}
 }
