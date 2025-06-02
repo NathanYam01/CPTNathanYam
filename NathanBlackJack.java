@@ -47,7 +47,21 @@ public class NathanBlackJack{
 			con.println("");
 			con.println("                                        Welcome to the Leaderboard");
 		}else if (charMenu == 'H' || charMenu == 'h'){
-			con.println("Help");
+			con.println("");
+			con.println("  TERMS                                              Help");
+			con.println("- Double Down");
+			con.println("- Bust                        - You are playing against the dealer");
+			con.println("- Hit");
+			con.println("- Stand      - Your goal is to get the closest to 21 without going over or to be higher than the dealer");
+			con.println("- Split");
+			con.println("- Bet                         - The dealer always hits below 17 so they must hit even at 16");
+			con.println("- Hand");
+			con.println("- Deck        - If you bust, you lose your bet, you get back your money if tied, if you win you get 2x ");
+			con.println(" ");
+			con.println("                              - If your first two cards equal to 21, you get 3x your money");
+			con.println(" ");
+			con.println("                              - Double down if your first 2 cards add up to 9,10,11");
+			con.println("                                but you only get 1 card after");
 		}else if (charMenu == 'Q' || charMenu == 'q'){
 			con.println("");
 			con.println("                                        You quit Nathan's Blackjack");
