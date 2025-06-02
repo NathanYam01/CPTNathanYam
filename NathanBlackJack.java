@@ -32,7 +32,6 @@ public class NathanBlackJack{
 		con.println("                                                            (P) Play                            ");
 		con.println("                                                            (L) LeaderBoard                     ");
 		con.println("                                                            (H) Help                            ");
-		con.println("                                                            (S) ???                             ");
 		con.println("                                                            (Q) Quit                            ");	
 		
 		char charMenu = con.getChar();
