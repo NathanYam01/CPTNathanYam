@@ -32,6 +32,7 @@ public class NathanBlackJack{
 		con.println("                                                            (P) Play                            ");
 		con.println("                                                            (L) LeaderBoard                     ");
 		con.println("                                                            (H) Help                            ");
+		con.println("                                                            (S) ???                             ");
 		con.println("                                                            (Q) Quit                            ");	
 		
 		char charMenu = con.getChar();
@@ -51,9 +52,16 @@ public class NathanBlackJack{
 		}else if (charMenu == 'Q' || charMenu == 'q'){
 			con.println("");
 			con.println("                                        You quit Nathan's Blackjack");
+		}else if (charMenu == 'S' || charMenu == 's'){
+			con.println("");
+			con.println("                                        You found the secret menu!");
+			con.println("");
+			con.println("                                      Why was Cinderella so bad at soccer?");
+			con.println("                                      She kept running away from the ball!");
 		}else{
 			con.println("");
 			con.println("                                        Wrong key, restart program!!!");
+		
 		
 		
 		}
