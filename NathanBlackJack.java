@@ -61,7 +61,7 @@ public class NathanBlackJack{
 			con.println("                              - If your first two cards equal to 21, you get 3x your money");
 			con.println(" ");
 			con.println("                              - If you get 5 cards without busting, you get 3x your money,");
-			con.println("                                if the dealer gets 5 cards, they win automatically");
+			con.println("                                	if the dealer gets 5 cards, they win automatically");
 			con.println(" ");
 			con.println("                              - Double down if your first 2 cards add up to 9,10,11");
 			con.println("                                but you only get 1 card after");
