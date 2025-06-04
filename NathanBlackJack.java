@@ -69,6 +69,28 @@ public class NathanBlackJack{
 					deckIndex++;
 				}
 			}
+			for (int intcount = 0; intcount < 52 - 1; intcount++) {
+				for (int intcount2 = 0; intcount2 < 52 - 1 - intcount; intcount2++){
+					if(deck[intcount2][2] > deck[intcount2 + 1][2]){
+						int[] temp = deck[intcount2];
+						deck[intcount2] = deck[intcount2 + 1];
+						deck[intcount2 + 1] = temp;
+					}
+				}
+			}
+			deckIndex = 0;
+			
+			con.println("You have $" +intPlayerMoney);
+			con.print("Enter your bet: ");
+			int intbet = con.readInt();
+			if(intbet > intPlayerMoney || intbet <= 0){
+				con.println("Invalid bet");
+				continue;
+				
+			}
+			
+			int[] PlayerHand = new int[5];
+			int[] PlayerSuits = new int[5];
 		}
 		//Leaderboard
 		}else if (charMenu == 'L' || charMenu == 'l'){
