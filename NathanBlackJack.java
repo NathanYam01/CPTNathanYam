@@ -60,26 +60,26 @@ public class NathanBlackJack{
 		boolean playing = true;
 		
 		while(playing && intPlayerMoney > 0){
-			int[][] deck = new int[52][3];
-			int deckIndex = 0;
+			int[][] intdeck = new int[52][3];
+			int intdeckIndex = 0;
 			for(int suit = 1; suit <=4; suit++) {
 				for(int value = 1; value <= 13; value++){
-					deck[deckIndex][0] = value;
-					deck[deckIndex][1] = suit;
-					deck[deckIndex][2] = rand.nextInt(100) + 1;
-					deckIndex++;
+					intdeck[intdeckIndex][0] = value;
+					intdeck[intdeckIndex][1] = suit;
+					intdeck[intdeckIndex][2] = rand.nextInt(100) + 1; //FIX
+					intdeckIndex++;
 				}
 			}
-			for (int intcount = 0; intcount < 52 - 1; intcount++) {
-				for (int intcount2 = 0; intcount2 < 52 - 1 - intcount; intcount2++){
-					if(deck[intcount2][2] > deck[intcount2 + 1][2]){
-						int[] temp = deck[intcount2];
-						deck[intcount2] = deck[intcount2 + 1];
-						deck[intcount2 + 1] = temp;
+			for (int intcount = 0; intcount < 52 - 1; intcount++) {  //FIX
+				for (int intcount2 = 0; intcount2 < 52 - 1 - intcount; intcount2++){ //FIX
+					if(intdeck[intcount2][2] > intdeck[intcount2 + 1][2]){ //FIX
+						int[] inttemp = intdeck[intcount2];
+						intdeck[intcount2] = intdeck[intcount2 + 1];
+						intdeck[intcount2 + 1] = inttemp;
 					}
 				}
 			}
-			deckIndex = 0;
+			intdeckIndex = 0;
 			
 			//Betting
 			con.println("You have $" +intPlayerMoney);
@@ -96,6 +96,16 @@ public class NathanBlackJack{
 			int[] DealerHand = new int[5];
 			int[] DealerSuits = new int[5];
 			int PlayerCards = 2, DealerCards = 1;
+			
+			PlayerHand[0] = intdeck[intdeckIndex][0]; 
+			PlayerSuits[0] = intdeck[intdeckIndex++][1];
+			PlayerHand[1] = intdeck[intdeckIndex][0]; 
+			PlayerSuits[1] = intdeck[intdeckIndex++][1];
+			PlayerHand[0] = intdeck[intdeckIndex][0]; 
+			PlayerSuits[1] = intdeck[intdeckIndex++][1];
+			
+			//con.println("Your cards :"
+
 		}
 		//Leaderboard
 		}else if (charMenu == 'L' || charMenu == 'l'){
