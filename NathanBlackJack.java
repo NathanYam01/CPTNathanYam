@@ -93,12 +93,15 @@ public class NathanBlackJack{
 			
 			int[] PlayerHand = new int[5];
 			int[] PlayerSuits = new int[5];
+			int[] DealerHand = new int[5];
+			int[] DealerSuits = new int[5];
+			int PlayerCards = 2, DealerCards = 1;
 		}
 		//Leaderboard
 		}else if (charMenu == 'L' || charMenu == 'l'){
 			con.println("");
 			con.println("                                        Welcome to the Leaderboard");
-			
+				
 		//Help
 		}else if (charMenu == 'H' || charMenu == 'h'){
 			con.println("");
