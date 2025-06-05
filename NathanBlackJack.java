@@ -42,6 +42,7 @@ public class NathanBlackJack{
 		con.fillRect(0,0,1280,720);
 		
 		//Play
+		//Naming
 			int intPlayerMoney;
 			String strPlayerName;
 			if(charMenu == 'P' || charMenu == 'p'){
@@ -80,6 +81,7 @@ public class NathanBlackJack{
 			}
 			deckIndex = 0;
 			
+			//Betting
 			con.println("You have $" +intPlayerMoney);
 			con.print("Enter your bet: ");
 			int intbet = con.readInt();
@@ -96,6 +98,7 @@ public class NathanBlackJack{
 		}else if (charMenu == 'L' || charMenu == 'l'){
 			con.println("");
 			con.println("                                        Welcome to the Leaderboard");
+			
 		//Help
 		}else if (charMenu == 'H' || charMenu == 'h'){
 			con.println("");
