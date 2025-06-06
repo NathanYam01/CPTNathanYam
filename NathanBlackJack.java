@@ -104,7 +104,8 @@ public class NathanBlackJack{
 			intPlayerHand[0] = intdeck[intdeckIndex][0]; 
 			intPlayerSuits[1] = intdeck[intdeckIndex++][1];
 			
-			con.println("Your cards :" + getCardName(intPlayerHand[0], intPlayerSuits[0]) + ", " + getCardName(intPlayerHand[1], intPlayerSuits[1]));
+			//intPlayerHands = NathanBlackJackMethod.getCardName;
+			//con.println("Your cards :" + getCardName(intPlayerHand[0], intPlayerSuits[0]) + ", " + getCardName(intPlayerHand[1], intPlayerSuits[1]));
 
 		}
 		//Leaderboard
