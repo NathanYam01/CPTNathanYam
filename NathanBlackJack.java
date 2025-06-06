@@ -57,16 +57,16 @@ public class NathanBlackJack{
 			}
 		//Game Start
 		Random rand = new Random();
-		boolean playing = true;
+		boolean booplaying = true;
 		
-		while(playing && intPlayerMoney > 0){
+		while(booplaying && intPlayerMoney > 0){
 			int[][] intdeck = new int[52][3];
 			int intdeckIndex = 0;
 			for(int suit = 1; suit <=4; suit++) {
 				for(int value = 1; value <= 13; value++){
 					intdeck[intdeckIndex][0] = value;
 					intdeck[intdeckIndex][1] = suit;
-					intdeck[intdeckIndex][2] = rand.nextInt(100) + 1; //FIX
+					intdeck[intdeckIndex][2] = (int)(Math.random()*100 + 1); 
 					intdeckIndex++;
 				}
 			}
@@ -104,7 +104,7 @@ public class NathanBlackJack{
 			PlayerHand[0] = intdeck[intdeckIndex][0]; 
 			PlayerSuits[1] = intdeck[intdeckIndex++][1];
 			
-			//con.println("Your cards :"
+			//con.println("Your cards :" 
 
 		}
 		//Leaderboard
