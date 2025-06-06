@@ -91,20 +91,20 @@ public class NathanBlackJack{
 				
 			}
 			
-			int[] PlayerHand = new int[5];
-			int[] PlayerSuits = new int[5];
-			int[] DealerHand = new int[5];
-			int[] DealerSuits = new int[5];
-			int PlayerCards = 2, DealerCards = 1;
+			int[] intPlayerHand = new int[5];
+			int[] intPlayerSuits = new int[5];
+			int[] intDealerHand = new int[5];
+			int[] intDealerSuits = new int[5];
+			int intPlayerCards = 2, intDealerCards = 1;
 			
-			PlayerHand[0] = intdeck[intdeckIndex][0]; 
-			PlayerSuits[0] = intdeck[intdeckIndex++][1];
-			PlayerHand[1] = intdeck[intdeckIndex][0]; 
-			PlayerSuits[1] = intdeck[intdeckIndex++][1];
-			PlayerHand[0] = intdeck[intdeckIndex][0]; 
-			PlayerSuits[1] = intdeck[intdeckIndex++][1];
+			intPlayerHand[0] = intdeck[intdeckIndex][0]; 
+			intPlayerSuits[0] = intdeck[intdeckIndex++][1];
+			intPlayerHand[1] = intdeck[intdeckIndex][0]; 
+			intPlayerSuits[1] = intdeck[intdeckIndex++][1];
+			intPlayerHand[0] = intdeck[intdeckIndex][0]; 
+			intPlayerSuits[1] = intdeck[intdeckIndex++][1];
 			
-			//con.println("Your cards :" 
+			con.println("Your cards :" + getCardName(intPlayerHand[0], intPlayerSuits[0]) + ", " + getCardName(intPlayerHand[1], intPlayerSuits[1]));
 
 		}
 		//Leaderboard
