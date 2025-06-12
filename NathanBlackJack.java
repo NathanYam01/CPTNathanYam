@@ -133,6 +133,7 @@ public class NathanBlackJack{
 	
 	//ask to hit or stand 
 	if(blnDoubleDown == false){
+		boolean blnHit = true;
 		while(blnHit && intPlayerCards < 5){
 			con.println("Hit (h) or Stand (s): ");
 			if(con.getChar() == 'h'){
@@ -148,6 +149,19 @@ public class NathanBlackJack{
 				blnHit = false;
 			}
 		}
+	}
+	//dealer plays	
+	int intPlayerTotal = NathanBlackJackMethod.sumHand(intPlayerHand, intPlayerCards);
+	int intDealerTotal = NathanBlackJackMethod.sumHand(intDealerHand, intDealerCards);
+	while(intDealerTotal < 17 && intDealerCards < 5){
+		intDealerHand[intDealerCards] = intdeck[intdeckIndex][0];
+		intDealerSuits[intDealerCards++] = intdeck[intdeckIndex++][1];
+		intDealerTotal = NathanBlackJackMethod.sumHand(intDealerHand, intDealerCards);
+	}
+	//Show dealer cards
+	con.println("Dealer Cards: ");
+	for(int intShow = 0; intShow < intDealerCards; intShow++){
+		con.println(NathanBlackJackMethod.getCardName(intDealerHand[intShow], intDealerSuits[intShow]));
 	}
 		//Leaderboard
 		}else if (charMenu == 'L' || charMenu == 'l'){
