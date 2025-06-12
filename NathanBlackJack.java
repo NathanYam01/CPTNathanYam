@@ -178,6 +178,24 @@ public class NathanBlackJack{
 		}else{ 
 			intPayout = intbet* 2;
 		}
+		//Pays the winner
+		con.println("You win $" + intPayout);
+		intPlayerMoney = intPlayerMoney + intPayout;
+	}else if(intPlayerTotal == intDealerTotal){
+		con.println("Push! You get your moneyback");
+	}else{ 
+		con.println("Dealer Wins. BooHoo");
+		intPlayerMoney = intPlayerMoney - intbet;
+	}
+	//Asks if you want to play agian
+	con.print("Play agian? (y/n)");
+	booplaying = con.getChar() == 'y';
+	NathanBlackJackMethod.savetoleaderboard(strPlayerName, intPlayerMoney);
+
+	}
+}
+		
+		
 		//Leaderboard
 		}else if (charMenu == 'L' || charMenu == 'l'){
 			con.println("");
