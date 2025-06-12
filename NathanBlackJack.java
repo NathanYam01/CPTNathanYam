@@ -116,17 +116,10 @@ public class NathanBlackJack{
 			intPlayerSuits[0] = intdeck[intdeckIndex++][1];
 			intPlayerHand[1] = intdeck[intdeckIndex][0]; 
 			intPlayerSuits[1] = intdeck[intdeckIndex++][1];
-			intPlayerHand[0] = intdeck[intdeckIndex][0]; 
-			intPlayerSuits[1] = intdeck[intdeckIndex++][1];
 			
-			//int intPlayerHand;
-			//int intPlayerSuits;
-			//String strgetCardName = NathanBlackJackMethod.getCardName(intPlayerHand, intPlayerSuits);
 			intDealerHand[0] = intdeck[intdeckIndex][0]; 
 			intDealerSuits[0] = intdeck[intdeckIndex++][1];
 			
-			//con.println("Your cards :" + getCardName(intPlayerHand[0], intPlayerSuits[0]) + ", " + getCardName(intPlayerHand[1], intPlayerSuits[1]));
-
 			//Show your starting cards
 			con.println("Your cards: " + NathanBlackJackMethod.getCardName(intPlayerHand[0], intPlayerSuits[0]) + " , " + NathanBlackJackMethod.getCardName(intPlayerHand[1], intPlayerSuits[1]));
 			con.println("Dealer shows: " + NathanBlackJackMethod.getCardName(intDealerHand[0], intDealerSuits[0]));
@@ -212,11 +205,9 @@ public class NathanBlackJack{
 		
 		
 		//Leaderboard
-		}else if (charMenu == 'L' || charMenu == 'l'){
 		else if (charMenu == 'L' || charMenu == 'l'){
 			con.println("");
 			con.println("                                        Welcome to the Leaderboard");
-				
 			NathanBlackJackMethod.displayLeaderboard(con);
 		//Help
 		}else if (charMenu == 'H' || charMenu == 'h'){
