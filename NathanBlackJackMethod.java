@@ -13,4 +13,15 @@ public class NathanBlackJackMethod{
 		else return intValue;
 	}
 	
+	public static int sumHand(int[] intHandArray, int intCardCount){
+		int intSum = 0;
+		int intAces = 0;
+		for(int intLoop = 0; intLoop < intCardCount; intLoop++){
+			int intValue = getCardValue(intHandArray[intLoop]);
+			if(intValue == 11) intAces++;
+				intSum = intSum + intValue;
+		}
+		while(intSum < 21 && intAces-- > 0) intSum = intSum - 10;
+		return intSum;
+	}
 }
