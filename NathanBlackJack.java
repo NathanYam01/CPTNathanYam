@@ -3,6 +3,10 @@ import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
+		//Nathan Yam
+		//BlackJack
+		//12/06/20252
+		//V 1.01
 public class NathanBlackJack{
 	public static void main(String[] args){
 		//Name of the game and the size of the console
@@ -199,7 +203,6 @@ public class NathanBlackJack{
 	con.print("Play agian? (y/n)");
 	booplaying = con.getChar() == 'y';
 	NathanBlackJackMethod.savetoleaderboard(strPlayerName, intPlayerMoney);
-
 	}
 }
 		
