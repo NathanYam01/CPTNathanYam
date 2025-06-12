@@ -129,6 +129,26 @@ public class NathanBlackJack{
 					intPlayerSuits[intPlayerCards++] = intdeck[intdeckIndex++][1];
 	
 		}
+	}
+	
+	//ask to hit or stand 
+	if(blnDoubleDown == false){
+		while(blnHit && intPlayerCards < 5){
+			con.println("Hit (h) or Stand (s): ");
+			if(con.getChar() == 'h'){
+				intPlayerHand[intPlayerCards] = intdeck[intdeckIndex][0];
+				intPlayerSuits[intPlayerCards++] = intdeck[intdeckIndex++][1];
+				con.println("Your cards: ");
+				for(int intShow = 0; intShow < intPlayerCards; intShow++){
+					con.println(NathanBlackJackMethod.getCardName(intPlayerHand[intShow], intPlayerSuits[intShow]) + " ");
+				}
+				con.println("");
+				if(NathanBlackJackMethod.sumHand(intPlayerHand, intPlayerCards) > 21) break;
+			}else{
+				blnHit = false;
+			}
+		}
+	}
 		//Leaderboard
 		}else if (charMenu == 'L' || charMenu == 'l'){
 			con.println("");
