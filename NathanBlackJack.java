@@ -163,6 +163,21 @@ public class NathanBlackJack{
 	for(int intShow = 0; intShow < intDealerCards; intShow++){
 		con.println(NathanBlackJackMethod.getCardName(intDealerHand[intShow], intDealerSuits[intShow]));
 	}
+	//shows final cards
+	con.println("Dealer total: " + intDealerTotal);
+	con.println("Your total: " +intPlayerTotal);
+	
+	//checks who wins 
+	int intPayout;
+	if(intPlayerTotal > 21){
+		con.println("You busted.");
+		intPlayerMoney = intPlayerMoney - intbet;
+	}else if (intDealerTotal > 1 || intPlayerTotal > intDealerTotal){
+		if(intPlayerTotal == 21 && intPlayerCards == 2 ||intPlayerCards == 5){
+			intPayout = intbet * 3;
+		}else{ 
+			intPayout = intbet* 2;
+		}
 		//Leaderboard
 		}else if (charMenu == 'L' || charMenu == 'l'){
 			con.println("");
