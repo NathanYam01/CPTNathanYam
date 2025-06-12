@@ -107,9 +107,27 @@ public class NathanBlackJack{
 			//int intPlayerHand;
 			//int intPlayerSuits;
 			//String strgetCardName = NathanBlackJackMethod.getCardName(intPlayerHand, intPlayerSuits);
+			intDealerHand[0] = intdeck[intdeckIndex][0]; 
+			intDealerSuits[0] = intdeck[intdeckIndex++][1];
 			
 			//con.println("Your cards :" + getCardName(intPlayerHand[0], intPlayerSuits[0]) + ", " + getCardName(intPlayerHand[1], intPlayerSuits[1]));
 
+			//Show your starting cards
+			con.println("Your cards: " + NathanBlackJackMethod.getCardName(intPlayerHand[0], intPlayerSuits[0]) + " , " + NathanBlackJackMethod.getCardName(intPlayerHand[1], intPlayerSuits[1]));
+			con.println("Dealer shows: " + NathanBlackJackMethod.getCardName(intDealerHand[0], intDealerSuits[0]));
+			
+			//Double down
+			boolean blnDoubleDown = false;
+			int intInitialSum;
+			intInitialSum = NathanBlackJackMethod.getCardValue(intPlayerHand[0]) + NathanBlackJackMethod.getCardValue(intPlayerHand[1]);
+			if(intInitialSum == 9 || intInitialSum == 10 || intInitialSum == 11){
+				con.println("Double down? (y/n): ");
+				if(con.getChar()== 'y'){
+					blnDoubleDown = true;
+					intbet = intbet * 2;
+					intPlayerHand[intPlayerCards] = intdeck[intdeckIndex][0];
+					intPlayerSuits[intPlayerCards++] = intdeck[intdeckIndex++][1];
+	
 		}
 		//Leaderboard
 		}else if (charMenu == 'L' || charMenu == 'l'){
