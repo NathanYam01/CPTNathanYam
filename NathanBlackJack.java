@@ -6,9 +6,11 @@ import java.util.Random;
 public class NathanBlackJack{
 	public static void main(String[] args){
 		//Name of the game and the size of the console
+		
 		Console con = new Console("BlackJack",1280,720);
 		//Main Menu
 		//Imports and tells where the image goes
+		
 		BufferedImage blackjacklogo = con.loadImage("BlackJacklogo.png");
 		con.drawImage(blackjacklogo ,250,200);
 
@@ -27,6 +29,7 @@ public class NathanBlackJack{
 
 
 		//Main Menu Text
+		
 		con.println("                                                            Welcome To Nathan's Blackjack!      ");
 		con.println("                                                                                                ");
 		con.println("                                                            Type To Choose                      ");
@@ -37,29 +40,37 @@ public class NathanBlackJack{
 		
 		char charMenu = con.getChar();
 		
+		//Clear the screen and sets background colour
 		con.clear();
 		con.setDrawColor(Color.BLACK);
 		con.fillRect(0,0,1280,720);
 		
 		//Play
 		//Naming
+		
+		
 			int intPlayerMoney;
 			String strPlayerName;
 			if(charMenu == 'P' || charMenu == 'p'){
 			con.println("");
 			con.println("                                             Let's Play");
+			con.println("                                    All Jack, Queen, Kings count as 10");
 			con.print("Enter your name: ");
+			//Statitan name gives more money
 			strPlayerName = con.readLine();
 			if(strPlayerName.equals("statitan")){
 				intPlayerMoney = 2000;
 			}else{
 				intPlayerMoney = 1000;
 			}
+			
+			
 		//Game Start
 		Random rand = new Random();
 		boolean booplaying = true;
-		
+		//Loops the entire game
 		while(booplaying && intPlayerMoney > 0){
+			//Shuffle and creates the deck
 			int[][] intdeck = new int[52][3];
 			int intdeckIndex = 0;
 			for(int suit = 1; suit <=4; suit++) {
@@ -70,6 +81,8 @@ public class NathanBlackJack{
 					intdeckIndex++;
 				}
 			}
+			
+			//Bubble sort
 			for (int intcount = 0; intcount < 52 - 1; intcount++) {  //FIX
 				for (int intcount2 = 0; intcount2 < 52 - 1 - intcount; intcount2++){ //FIX
 					if(intdeck[intcount2][2] > intdeck[intcount2 + 1][2]){ //FIX
@@ -91,12 +104,14 @@ public class NathanBlackJack{
 				
 			}
 			
+			//Dealer hand and player hand
 			int[] intPlayerHand = new int[5];
 			int[] intPlayerSuits = new int[5];
 			int[] intDealerHand = new int[5];
 			int[] intDealerSuits = new int[5];
 			int intPlayerCards = 2, intDealerCards = 1;
 			
+			//Deak initial card
 			intPlayerHand[0] = intdeck[intdeckIndex][0]; 
 			intPlayerSuits[0] = intdeck[intdeckIndex++][1];
 			intPlayerHand[1] = intdeck[intdeckIndex][0]; 
@@ -198,9 +213,11 @@ public class NathanBlackJack{
 		
 		//Leaderboard
 		}else if (charMenu == 'L' || charMenu == 'l'){
+		else if (charMenu == 'L' || charMenu == 'l'){
 			con.println("");
 			con.println("                                        Welcome to the Leaderboard");
 				
+			NathanBlackJackMethod.displayLeaderboard(con);
 		//Help
 		}else if (charMenu == 'H' || charMenu == 'h'){
 			con.println("");
